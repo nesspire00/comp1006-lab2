@@ -18,17 +18,15 @@
         $ok = true;
 
         if(empty($club_name)){
-            echo 'Club Name is Empty!<br />';
             $ok = false;
         }
 
         if(empty($ground)){
-            echo 'Club Ground is Empty!<br />';
             $ok = false;
         }
 
         if(empty($club_id)){
-            echo 'club_id is invalid';
+            $ok = false;
         }
 
         if($ok){
@@ -46,10 +44,10 @@
 
         $cmd->execute();
 
-        header('location:show-clubs.php');
-
         $conn = null;
         }
+        
+        header('location:show-clubs.php');
     ?>
 
 </body>
